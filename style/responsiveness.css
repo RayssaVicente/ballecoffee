@@ -1,0 +1,86 @@
+
+
+/* Estilos para telas pequenas */
+@media (max-width: 379px) {
+
+/* ******************************************************************************** */
+
+/* estilizando logo e menu */
+
+nav {
+    flex-direction: column;
+    align-items: center;
+    
+}
+  
+.logo {
+    margin-bottom: 10px; 
+}
+
+.menu {
+    flex-direction: row;
+    text-align: center;
+    
+}
+
+.menu li {
+    margin: 5px 0; 
+    
+}
+
+.github {
+    margin-top: 10px; 
+}
+
+
+/* ******************************************************************************** */
+
+/* estilizando o conteudo principal*/
+
+.hero{
+    max-width:379px;
+}
+
+.hero-imagens-container > ficture{
+    display: none;
+}
+
+h1{
+    font-size: 2.5rem;
+    
+}
+
+h2{
+    font-size: 3rem;
+}
+
+.botao-container{
+    padding: 0;
+    margin: 0;  
+}
+
+.receitas{
+    max-width: 379px;
+    padding: 2rem 1rem;
+
+}
+
+.receitas-titulo{
+    font-size: 1.5rem;
+}
+
+.receitas-card-container{
+    padding: 0rem 1rem;
+    gap: 2rem;
+    
+} 
+
+.receitas-card{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    gap: 2rem;
+    flex-basis: 29rem;
+    margin-top: 2rem;
+}
+
+} 

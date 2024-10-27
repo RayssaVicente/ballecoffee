@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe</title>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/responsiveness.css">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}">
+    <link rel="{{url_for('static', filename= 'css/responsiveness.css')}}">
     <meta name="description" content="Explore dezenas de variações das bebidas favoritas entres os devs ao redor do mundo">
 </head>
 <body>
@@ -137,6 +137,6 @@
         <p class="footer-autor">Feito com muito🩶, é café por Rayssa Vicente</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="{{url_for('static', filename= 'js/cru.js')}}"></script>
 </body>
 </html>

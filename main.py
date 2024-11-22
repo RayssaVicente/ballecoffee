@@ -8,4 +8,4 @@ app = Flask(__name__)
 app.register_blueprint(home_route)
 app.register_blueprint(receitas_routes, url_prefix='/receitas')
 
-app.run(debug=True)
+app.run(host = "0.0.0.0" , port = 5000)

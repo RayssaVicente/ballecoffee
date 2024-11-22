@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffe</title>
-    <link rel="stylesheet" href="{{url_for('static', filename= 'css/main.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}">
-    <link rel="{{url_for('static', filename= 'css/responsiveness.css')}}">
-    <meta name="description" content="Explore dezenas de variações das bebidas favoritas entres os devs ao redor do mundo">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+    
+   
+
+    <title>BalleCoffe</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="nav">
             <span class="logo">ballecoffe</span>
-
-            <ul class="menu">
-                <li><a>Home</a></li>
-                <li><a>Receitas</a></li>
-                <li><a>Novidades</a></li>
-                <li><a>Melhor avaliadas</a></li>
+            <button class="hamburguer"></button>
+        
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="{{url_for('receitas.home')}}">Receitas</a></li>
+                <li><a href="#">novidades</a></li>
+                <li><a class="github">GitHub</a></li>
             </ul>
-            <a class="github">GitHub</a>
-             
+            
+           
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
+        
     </header>
     <main>
         <div class="principal">
@@ -35,29 +44,30 @@
                     <h2 class="hero-subtitulo">Explore dezenas de variações das bebidas favoritas entres os devs ao redor do mundo</h2>
                 </header>
                 <div class="hero-imagens-container">
-                    <ficture><img src="assets/imagem-01.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-02.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-03.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-04.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-05.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-06.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-07.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-08.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-09.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-10.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-11.png" alt=""></ficture>
-                    <ficture><img src="assets/imagem-12.png" alt=""></ficture>
+                    <ficture><img  src="{{ url_for('static', filename='assets/imagem-01.png') }}" alt=""></ficture>
+                    
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-02.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-03.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-04.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-05.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-06.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-07.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-08.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-09.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-10.png') }}" alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-11.png') }}"alt=""></ficture>
+                    <ficture><img src="{{ url_for('static', filename='assets/imagem-12.png') }}" alt=""></ficture>
                 </div>
             </section>
     </div>
 
         <section class="botao-container">
-            <button type="button" id="botao"><img src="assets/Button.svg" alt="botão"></button>
+            <button type="button" id="botao" class="button"><img src="{{ url_for('static', filename='assets/Button.svg')}}" alt="botão"></button>
         </section>
 
         <section class="receitas">
 
-            <header class="recitas-cabecalho">
+            <header class="receitas-cabecalho">
                 <span class="destaque marron">receitas</span>
                 <h2 class="receitas-titulo">Confira as últimas receitas</h2>
                 <p class="receitas-subtitulo">Dê uma olhada nas receitas mais amadas!</p>
@@ -72,7 +82,7 @@
                                 <span class="destaque amarelo">em alta</span>
                                 <h3 class="receita-titulo">Cappuccino ☕</h3>
                             </div>
-                            <p class="receita-avaliacao">Bom . 4/4</p>
+                            <p class="receita-avaliacao">Bom.⭐⭐⭐</p>
                         </header>
 
                         <p class="receita-descricao">Uma bebida ideal para os amantes de doce e cremosidade, 😍</p>
@@ -86,7 +96,7 @@
                                 <span class="destaque amarelo">novo</span>
                                 <h3 class="receita-titulo">Expresso </h3>
                             </div>
-                            <p class="receita-avaliacao">Extraordinario . 4/4</p>
+                            <p class="receita-avaliacao">Extraordinario.⭐⭐⭐⭐</p>
                         </header>
 
                         <p class="receita-descricao">Uma bebida ideal para os amantes de doce e cremosidade.</p>
@@ -100,7 +110,7 @@
                                 <span class="destaque amarelo">novo</span>
                                 <h3 class="receita-titulo">Expresso ☕</h3>
                             </div>
-                            <p class="receita-avaliacao">Extraordinario . 3/4</p>
+                            <p class="receita-avaliacao">Extraordinario.⭐⭐⭐⭐</p>
                         </header>
 
                         <p class="receita-descricao">Para quem gosta de um café amargo.</p>
@@ -114,7 +124,7 @@
                                 <span class="destaque amarelo">novo</span>
                                 <h3 class="receita-titulo">Expresso ☕</h3>
                             </div>
-                            <p class="receita-avaliacao">Extraordinario . 4/4</p>
+                            <p class="receita-avaliacao">Bom.⭐⭐⭐</p>
                         </header>
 
                         <p class="receita-descricao">Uma bebida ideal para os amantes de doce e cremosidade. </p>
@@ -122,6 +132,7 @@
                             <img src="" alt="">
                             <span class="receita-autor-nome"> Rafaella Ballerini</span>
                         </div>
+                        
      
                 </div>
             </div>
@@ -134,9 +145,9 @@
     </main>
     <footer>
         <p class="footer-copy">Coppyright CODEFEE  2024</p>
-        <p class="footer-autor">Feito com muito🩶, é café por Rayssa Vicente</p>
+        <p class="footer-autor">Feito com muito🩶, é café por Rayssa Vicente, Maria Luiza e Luan Carlos,Carlos Eduardo</p>
     </footer>
 
-    <script src="{{url_for('static', filename= 'js/cru.js')}}"></script>
+
 </body>
 </html>
